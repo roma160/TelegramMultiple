@@ -4,9 +4,26 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TelegramMultiple"
+        xmlns:material="http://materialdesigninxaml.net/winfx/xaml/themes"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
-    </Grid>
+        Title="MainWindow" Height="450" Width="800" AllowsTransparency="True"
+        Background="Transparent" WindowStyle="None" ResizeMode="NoResize" Deactivated="Window_Deactivated" Activated="Window_Activated">
+    <WindowChrome.WindowChrome>
+        <WindowChrome CaptionHeight="24"/>
+    </WindowChrome.WindowChrome>
+
+    <Border BorderThickness="0" CornerRadius="4" Background="{DynamicResource MaterialDesignDarkBackground}">
+        <DockPanel Name="TitleBar">
+            <material:ColorZone material:ShadowAssist.ShadowDepth="Depth2" CornerRadius="4 4 0 0" BorderThickness="0" Background="{DynamicResource MaterialDesignDarkSeparatorBackground}">
+                <DockPanel Dock="Top" VerticalAlignment="Top" Height="25" WindowChrome.IsHitTestVisibleInChrome="True">
+                    <Button Name="CloseButton" Style="{StaticResource MaterialFlatButtonClose}" Background="Red" Width="30" DockPanel.Dock="Right" HorizontalAlignment="Right" Click="CloseButton_Click">
+                        <material:PackIcon Kind="Close" Margin="1"/>
+                    </Button>
+                    <Button Name="HideButton" Style="{StaticResource MaterialFlatButton}" Width="30" DockPanel.Dock="Right" HorizontalAlignment="Right" Background="#FF455361" Click="HideButton_Click">
+                        <material:PackIcon Kind="Minus" Margin="1"/>
+                    </Button>
+                </DockPanel>
+            </material:ColorZone>
+        </DockPanel>
+    </Border>
 </Window>
