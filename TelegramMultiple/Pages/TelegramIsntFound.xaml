@@ -1,0 +1,19 @@
+﻿<Page x:Class="TelegramMultiple.Pages.DownloadTelegram"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:TelegramMultiple.Pages"
+      xmlns:material="http://materialdesigninxaml.net/winfx/xaml/themes"
+      mc:Ignorable="d" 
+      d:DesignHeight="{Binding Height, Source={StaticResource PageSize}}" 
+      d:DesignWidth="{Binding Width, Source={StaticResource PageSize}}">
+    <Grid>
+        <TextBlock HorizontalAlignment="Left" Margin="51,55,0,0" TextWrapping="Wrap" Text="Telegram location is unknown" VerticalAlignment="Top" Height="60" Width="690" Foreground="White" FontSize="48" FontFamily="Franklin Gothic Heavy"/>
+        <TextBlock HorizontalAlignment="Left" Margin="86,150,0,0" TextWrapping="Wrap" Text="Please, enter enter path to the Telegram Portable or download latest version." VerticalAlignment="Top" FontFamily="Franklin Gothic Heavy" Foreground="#FFB8B8B8" Height="90" Width="625" FontSize="32"/>
+        <Button Content="Locate Telegram" HorizontalAlignment="Left" Margin="86,330,0,0" VerticalAlignment="Top" Width="270" Height="85" FontSize="30" Style="{StaticResource MaterialDesignRaisedAccentButton}" Foreground="#DD210091" material:ButtonAssist.CornerRadius="10" FontFamily="Franklin Gothic Demi Cond" FontWeight="Normal"/>
+        <Button HorizontalAlignment="Left" Margin="471,320,0,0" VerticalAlignment="Top" Width="270" Height="105" Style="{StaticResource MaterialDesignRaisedAccentButton}" material:ButtonAssist.CornerRadius="10">
+            <TextBlock FontFamily="Franklin Gothic Demi Cond" FontWeight="Normal" Text="Download latest version" FontSize="30" Foreground="#DD210091" TextWrapping="Wrap" Height="75" TextAlignment="Center"/>
+        </Button>
+    </Grid>
+</Page>

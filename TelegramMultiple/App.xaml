@@ -12,6 +12,7 @@
                  <ResourceDictionary Source="pack://application:,,,/MaterialDesignColors;component/Themes/Recommended/Accent/materialdesigncolor.green.xaml" />
                  <ResourceDictionary Source="pack://application:,,,/MaterialDesignColors;component/Themes/Recommended/Primary/materialdesigncolor.red.xaml" />
                  <ResourceDictionary Source="CustomStyles/MaterialFlatButton.xaml" />
+                 <ResourceDictionary Source="Parameters/ApplicationSettings.xaml" />
              </ResourceDictionary.MergedDictionaries>
          </ResourceDictionary>
     </Application.Resources>

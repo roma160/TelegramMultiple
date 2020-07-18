@@ -6,24 +6,30 @@
         xmlns:local="clr-namespace:TelegramMultiple"
         xmlns:material="http://materialdesigninxaml.net/winfx/xaml/themes"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800" AllowsTransparency="True"
-        Background="Transparent" WindowStyle="None" ResizeMode="NoResize" Deactivated="Window_Deactivated" Activated="Window_Activated">
+        Title="MainWindow" ResizeMode="CanMinimize" 
+        Deactivated="Window_Deactivated" Activated="Window_Activated" 
+        Width="{Binding Width, Source={StaticResource WindowSize}}" 
+        Height="{Binding Height, Source={StaticResource WindowSize}}">
+
     <WindowChrome.WindowChrome>
-        <WindowChrome CaptionHeight="24"/>
+        <WindowChrome CaptionHeight="24" UseAeroCaptionButtons="False"/>
     </WindowChrome.WindowChrome>
 
-    <Border BorderThickness="0" CornerRadius="4" Background="{DynamicResource MaterialDesignDarkBackground}">
-        <DockPanel Name="TitleBar">
-            <material:ColorZone material:ShadowAssist.ShadowDepth="Depth2" CornerRadius="4 4 0 0" BorderThickness="0" Background="{DynamicResource MaterialDesignDarkSeparatorBackground}">
-                <DockPanel Dock="Top" VerticalAlignment="Top" Height="25" WindowChrome.IsHitTestVisibleInChrome="True">
-                    <Button Name="CloseButton" Style="{StaticResource MaterialFlatButtonClose}" Background="Red" Width="30" DockPanel.Dock="Right" HorizontalAlignment="Right" Click="CloseButton_Click">
-                        <material:PackIcon Kind="Close" Margin="1"/>
-                    </Button>
-                    <Button Name="HideButton" Style="{StaticResource MaterialFlatButton}" Width="30" DockPanel.Dock="Right" HorizontalAlignment="Right" Background="#FF455361" Click="HideButton_Click">
-                        <material:PackIcon Kind="Minus" Margin="1"/>
-                    </Button>
-                </DockPanel>
-            </material:ColorZone>
-        </DockPanel>
-    </Border>
+    <DockPanel Background="{DynamicResource MaterialDesignDarkBackground}">
+        <material:ColorZone Name="TitleBar" material:ShadowAssist.ShadowDepth="Depth2" CornerRadius="4 4 0 0" BorderThickness="0" Background="{DynamicResource MaterialDesignDarkSeparatorBackground}" DockPanel.Dock="Top">
+            <DockPanel VerticalAlignment="Top" Height="25" WindowChrome.IsHitTestVisibleInChrome="True">
+                <Button Name="CloseButton" Style="{StaticResource MaterialFlatButton}" Background="Red" Width="30" DockPanel.Dock="Right" HorizontalAlignment="Right" Click="CloseButton_Click">
+                    <material:PackIcon Kind="Close" Margin="1"/>
+                </Button>
+                <Button Name="HideButton" Style="{StaticResource MaterialFlatButton}" Width="30" DockPanel.Dock="Right" HorizontalAlignment="Right" Background="#FF455361" Click="HideButton_Click">
+                    <material:PackIcon Kind="Minus" Margin="1"/>
+                </Button>
+
+                <Image x:Name="WindowIcon" DockPanel.Dock="Left" Width="{Binding ActualHeight, Mode=OneWay, RelativeSource={RelativeSource Self}}"/>
+                <TextBlock x:Name="WindowTitle" DockPanel.Dock="Left" HorizontalAlignment="Left" Text="Telegram Multiple" Padding="20,0,0,0" TextAlignment="Center" VerticalAlignment="Center" Foreground="#FFC1C1C1" FontFamily="Franklin Gothic Demi" FontSize="16"/>
+            </DockPanel>
+        </material:ColorZone>
+            
+        <Frame Name="MainContent" Source="/TelegramMultiple;component/Pages/TelegramIsntFound.xaml"/>
+    </DockPanel>
 </Window>

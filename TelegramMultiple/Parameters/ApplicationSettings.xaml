@@ -1,0 +1,5 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Int32Rect Width="800" Height="500" X="0" Y="0" x:Key="WindowSize"/>
+    <Int32Rect Width="800" Height="475" X="0" Y="0" x:Key="PageSize"/>
+</ResourceDictionary>
