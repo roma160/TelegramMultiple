@@ -15,8 +15,8 @@
         <WindowChrome CaptionHeight="24" UseAeroCaptionButtons="False"/>
     </WindowChrome.WindowChrome>
 
-    <DockPanel Background="{DynamicResource MaterialDesignDarkBackground}">
-        <material:ColorZone Name="TitleBar" material:ShadowAssist.ShadowDepth="Depth2" CornerRadius="4 4 0 0" BorderThickness="0" Background="{DynamicResource MaterialDesignDarkSeparatorBackground}" DockPanel.Dock="Top">
+    <DockPanel Background="{StaticResource MaterialDesignDarkBackground}">
+        <material:ColorZone Name="TitleBar" material:ShadowAssist.ShadowDepth="Depth2" CornerRadius="4 4 0 0" BorderThickness="0" Background="{StaticResource MaterialDesignDarkSeparatorBackground}" DockPanel.Dock="Top">
             <DockPanel VerticalAlignment="Top" Height="25" WindowChrome.IsHitTestVisibleInChrome="True">
                 <Button Name="CloseButton" Style="{StaticResource MaterialFlatButton}" Background="Red" Width="30" DockPanel.Dock="Right" HorizontalAlignment="Right" Click="CloseButton_Click">
                     <material:PackIcon Kind="Close" Margin="1"/>
