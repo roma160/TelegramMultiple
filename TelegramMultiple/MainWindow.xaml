@@ -9,7 +9,7 @@
         Title="MainWindow" ResizeMode="CanMinimize" 
         Deactivated="Window_Deactivated" Activated="Window_Activated" 
         Width="{Binding Width, Source={StaticResource WindowSize}}" 
-        Height="{Binding Height, Source={StaticResource WindowSize}}">
+        Height="{Binding Height, Source={StaticResource WindowSize}}" WindowStartupLocation="CenterScreen">
 
     <WindowChrome.WindowChrome>
         <WindowChrome CaptionHeight="24" UseAeroCaptionButtons="False"/>

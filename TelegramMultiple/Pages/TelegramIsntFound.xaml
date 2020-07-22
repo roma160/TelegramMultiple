@@ -11,8 +11,8 @@
     <Grid>
         <TextBlock HorizontalAlignment="Left" Margin="51,55,0,0" TextWrapping="Wrap" Text="Telegram location is unknown" VerticalAlignment="Top" Height="60" Width="690" Foreground="White" FontSize="48" FontFamily="Franklin Gothic Heavy"/>
         <TextBlock HorizontalAlignment="Left" Margin="86,150,0,0" TextWrapping="Wrap" Text="Please, enter enter path to the Telegram Portable or download latest version." VerticalAlignment="Top" FontFamily="Franklin Gothic Heavy" Foreground="#FFB8B8B8" Height="90" Width="625" FontSize="32"/>
-        <Button Content="Locate Telegram" HorizontalAlignment="Left" Margin="86,330,0,0" VerticalAlignment="Top" Width="270" Height="85" FontSize="30" Style="{StaticResource MaterialDesignRaisedAccentButton}" Foreground="#DD210091" material:ButtonAssist.CornerRadius="10" FontFamily="Franklin Gothic Demi Cond" FontWeight="Normal"/>
-        <Button HorizontalAlignment="Left" Margin="471,320,0,0" VerticalAlignment="Top" Width="270" Height="105" Style="{StaticResource MaterialDesignRaisedAccentButton}" material:ButtonAssist.CornerRadius="10">
+        <Button x:Name="LocateTelegramButton" Content="Locate Telegram" HorizontalAlignment="Left" Margin="86,330,0,0" VerticalAlignment="Top" Width="270" Height="85" FontSize="30" Style="{StaticResource MaterialDesignRaisedAccentButton}" Foreground="#DD210091" material:ButtonAssist.CornerRadius="10" FontFamily="Franklin Gothic Demi Cond" FontWeight="Normal"/>
+        <Button x:Name="DownloadTelegramButton" HorizontalAlignment="Left" Margin="471,320,0,0" VerticalAlignment="Top" Width="270" Height="105" Style="{StaticResource MaterialDesignRaisedAccentButton}" material:ButtonAssist.CornerRadius="10" Click="DownloadTelegramButton_Click">
             <TextBlock FontFamily="Franklin Gothic Demi Cond" FontWeight="Normal" Text="Download latest version" FontSize="30" Foreground="#DD210091" TextWrapping="Wrap" Height="75" TextAlignment="Center"/>
         </Button>
     </Grid>
